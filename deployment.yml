@@ -1,0 +1,45 @@
+﻿apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webapi
+  labels:
+    app: fun-with-flights
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      service: webapi
+  template:
+    metadata:
+      labels:
+        app: fun-with-flights
+        service: webapi
+    spec:
+      containers:
+        - name: webapi
+          image: vslcontainerregistry.azurecr.io/funwithflights:v1
+          env:
+            - name: ASPNETCORE_ENVIRONMENT
+              value: "Development"
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 80
+              protocol: TCP
+---
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    service.beta.kubernetes.io/azure-dns-label-name: vsl-fun-with-flights
+  name: webapi
+  labels:
+    app: fun-with-flights
+    service: webapi
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 80
+      targetPort: 80
+      protocol: TCP
+  selector:
+    service: webapi
