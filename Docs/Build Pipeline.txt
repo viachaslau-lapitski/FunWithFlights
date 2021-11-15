@@ -1,0 +1,10 @@
+﻿1) the foundation of CI/CD is Azure DevOps
+2) source repo is git
+3) trunk based approach is usesd when any commits to master trigger full (deployment to all env) CI/CD pipeline
+4) every PR should be peer reviewed (2+ approval required), all quality check gateways should pass
+5) PR triggers deployment to dev env
+6) Build and tests happen inside docker container
+7) CI is comprised of next phases: build, run unit tests, run integration tests, run code coverage, 
+static analysis (sonarqube), create image, push the image to repo with appropriate tag
+8) CD is comprised of next phases (with approval between steps if needed): deployment to dev, deployment to stage,
+deployment to prod

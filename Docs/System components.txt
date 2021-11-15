@@ -1,0 +1,31 @@
+﻿Frontend components:
+-User portal/Mobile app + chat bot - main customer portal (search and booking flights)
+-Management portal - internal portal for staff (run reports, manage price margins/bookings add new route providers
+and other runtime conf)
+-Re-seller portal - portal for resellers (sign up/in, review invoices, review consumed routes/info)
+
+Services:
+-Search - aggregate info about avail routes and provide user tailored info
+-Flight info - provide details about selected route/flight
+-Routes providers/adapters - api adapters to enable integration with merger service
+-Booking - place order to book flight on specific date
+-Payment - authorize payments, generate payment transactions
+-Pricing - runtime price calculator
+-Money exchange - gateway to external money exchange service 
+-Billing(Booking) processor - finalize booking and charge customer
+-Notification - send email/sms notifications
+-Reseller - reseller integration gateway, provice with route info and all nessesary info to complete booking
+-Chatbot - backend service of chatbot
+-CustomerEngagement - service for marketing campaigns
+-Account - user info and profile, purchase history
+-Loyalty - member points and customer suggestions
+-TicketsMarketplace - service to sell tickets back
+
+Databases:
+-Users - primary user info - emails, password hashes, logins, sessions for loggend and guest customers
+-Accounts - additional user profile info, member points, purchase history
+-Bookings - placed orders
+-Booking history - historical data about bookings
+-Prices - price margin, price range and actual price data
+-Tickets - db for TicketMarketplace service
+-Promotions - popular routes and other products offered to customers regarding member status

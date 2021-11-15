@@ -1,0 +1,21 @@
+﻿Frontend: React + Redux, TypeScript
+Platform: .NET 6, C# 10
+Cloud: Azure
+Cloud Development + CI/CD: Azure DevOps, Azure Pipelines + SonarQube, Helm + ACR
+Container orchestration: AKS (Kubernatis)
+Service Mesh: Istio (Traffic, Observability, Security) - Kiali, Graphana
+Messaging: Azure Queue
+Databases: Azure databases: SQL, MySQL
+Cache: Azure Cache (Redis)
+CDN: Azure CDN
+Metrics: Prometheus, AppInsights
+Log aggregator: Splunk
+Alerts: PagerDuty
+Secrets management: Azure Key Vault, Hashicorp Vault
+
+Payment providers: Braintree (support bitcoin payments), Stripe + Coinbase (bincoin payments)
+Notifications: Mailchimp
+Customer engagement: Braze
+L7 LB (+ DDoS prevention): Akamai, Azure DDoS Protection
+Chatbot: Azure Bot Service, Microsoft Bot Framework‍
+Direct advertisement: Google AdSense, Facebook’s audience network ads
